@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { SearchComponent } from './search/search.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,18 @@ import { SearchComponent } from './search/search.component';
     ProductDetailComponent,
     SearchComponent
   ],
+
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+        {path: '',                    component: HomeComponent},
+        {path: 'products/:productId', component: ProductDetailComponent}
+      ]),
+
+
   ],
+
+
   providers: [],
   bootstrap: [AppComponent]
 })
