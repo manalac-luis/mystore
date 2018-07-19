@@ -9,6 +9,8 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { SearchComponent } from './search/search.component';
 import {RouterModule} from '@angular/router';
+import {FormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import {RouterModule} from '@angular/router';
   ],
 
   imports: [
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot([
         {path: '',                    component: HomeComponent},
