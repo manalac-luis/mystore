@@ -10,6 +10,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { SearchComponent } from './search/search.component';
 import {RouterModule} from '@angular/router';
 import {FormsModule} from "@angular/forms";
+import {ProductService} from './shared/product.service';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import {FormsModule} from "@angular/forms";
   ],
 
 
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
